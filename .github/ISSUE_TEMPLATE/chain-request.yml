@@ -1,0 +1,58 @@
+name: "🌟 Chain request"
+description: Request new chain to be supported in our bridge
+labels: ["pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this feature request!
+  - type: input
+    id: chain-name
+    attributes:
+      label: Chain name
+      description: Chain name.
+      placeholder: Chain name
+    validations:
+      required: true
+  - type: input
+    id: token-link
+    attributes:
+      label: Chain link, provide the chain website link.
+      description: 
+      placeholder: Chain link
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Tell us the reason.
+      placeholder:
+  - type: checkboxes
+    id: chain-type
+    attributes:
+      label: Chain type
+      description: Chain type.
+      options:
+        - label: BTC Layer2
+        - label: ETH Layer2
+        - label: EVM
+        - label: Non EVM chain
+        - label: Others
+  - type: checkboxes
+    id: service
+    attributes:
+      label: Service to be supported
+      description: Which service .
+      options:
+        - label: Bool Bridge
+        - label: B² Bridge
+        - label: CKB Bridge
+  - type: checkboxes
+    id: required-info
+    attributes:
+      label: Final checks
+      description: Before submitting, please make sure you do the following
+      options:
+        - label: Check existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues).
+          required: true

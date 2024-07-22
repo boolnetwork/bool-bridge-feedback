@@ -1,0 +1,68 @@
+name: "🚀 Token request"
+description: Request new token to be supported in our bridge
+labels: ["pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this feature request!
+  - type: input
+    id: token-name
+    attributes:
+      label: Token name
+      description: Token name.
+      placeholder: Token name
+    validations:
+      required: true
+  - type: input
+    id: token-symbol
+    attributes:
+      label: Token symbol
+      description: Token symbol.
+      placeholder: Token symbol 
+  - type: input
+    id: token-decimal
+    attributes:
+      label: Token decimal
+      description: Token decimal.
+      placeholder: Token decimal
+  - type: input
+    id: token-link
+    attributes:
+      label: Token link, if erc20 token, provide a link to the token's explorer url, if brc20 or runes, provide a unisat link.
+      description: 
+      placeholder: Feature description
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: Tell us the reason.
+      placeholder:
+  - type: checkboxes
+    id: token-type
+    attributes:
+      label: Token type
+      description: Token type.
+      options:
+        - label: BRC-20
+        - label: RUNES
+        - label: ERC-20
+  - type: checkboxes
+    id: service
+    attributes:
+      label: Additional information
+      description: Additional information that helps us decide how to proceed.
+      options:
+        - label: Bool Bridge
+        - label: B² Bridge
+        - label: CKB Bridge
+  - type: checkboxes
+    id: required-info
+    attributes:
+      label: Final checks
+      description: Before submitting, please make sure you do the following
+      options:
+        - label: Check existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues).
+          required: true

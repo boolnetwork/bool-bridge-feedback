@@ -1,0 +1,27 @@
+name: "\U0001F41E Bug report"
+description: Create a report to help us improve Bool Bridge
+labels: ["pending triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us make Bool Bridge better! 
+  - type: checkboxes
+    id: service
+    attributes:
+      label: Choose a service 
+      description: Choose the service you face problem.
+      options:
+        - label: Bool Bridge
+        - label: B² Bridge
+        - label: CKB Bridge
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
