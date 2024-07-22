@@ -32,7 +32,6 @@ body:
     attributes:
       label: Chain Explorer
       description: If available, provide explorer for the chain.
-      placeholder: Chain RPCs.
       placeholder: Chain explorer.
     validations:
       required: true
