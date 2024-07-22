@@ -1,68 +1,78 @@
-name: "🚀 Token request"
-description: Request new token to be supported in our bridge
+name: "🚀 Token Support Request"
+description: Request a new token to be supported in our bridge
 labels: ["pending triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill out this feature request!
+        Thank you for taking the time to fill out this token support request!
   - type: input
     id: token-name
     attributes:
-      label: Token name
-      description: Token name.
-      placeholder: Token name
+      label: Token Name
+      description: Full name of the token
+      placeholder: e.g., Ethereum, Bitcoin
     validations:
       required: true
   - type: input
     id: token-symbol
     attributes:
-      label: Token symbol
-      description: Token symbol.
-      placeholder: Token symbol 
+      label: Token Symbol
+      description: Trading symbol of the token
+      placeholder: e.g., ETH, BTC
+    validations:
+      required: true
   - type: input
     id: token-decimal
     attributes:
-      label: Token decimal
-      description: Token decimal.
-      placeholder: Token decimal
+      label: Token Decimals
+      description: Number of decimal places for the token
+      placeholder: e.g., 18 for ETH, 8 for BTC
+    validations:
+      required: true
   - type: input
     id: token-link
     attributes:
-      label: Token link, if erc20 token, provide a link to the token's explorer url, if brc20 or runes, provide a unisat link.
-      description: 
-      placeholder: Feature description
+      label: Token Link
+      description: For ERC20 tokens, provide the token's explorer URL. For BRC20 or Runes, provide a Unisat link.
+      placeholder: e.g., https://etherscan.io/address/0x...
     validations:
       required: true
-  - type: textarea
-    id: reason
-    attributes:
-      label: Reason
-      description: Tell us the reason.
-      placeholder:
-  - type: checkboxes
+  - type: dropdown
     id: token-type
     attributes:
-      label: Token type
-      description: Token type.
+      label: Token Type
+      description: Select the type of token
       options:
-        - label: BRC-20
-        - label: RUNES
-        - label: ERC-20
+        - BRC-20
+        - RUNES
+        - ERC-20
+        - xUDT
+        - Other
+    validations:
+      required: true
   - type: checkboxes
     id: service
     attributes:
-      label: Additional information
-      description: Additional information that helps us decide how to proceed.
+      label: Requested Services
+      description: Which services should support this token?
       options:
         - label: Bool Bridge
         - label: B² Bridge
         - label: CKB Bridge
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Additional Details
+      description: Provide more information, including which chains you want to bridge the assets between, etc.
+      placeholder: Enter additional details here
   - type: checkboxes
     id: required-info
     attributes:
-      label: Final checks
-      description: Before submitting, please make sure you do the following
+      label: Final Checks
+      description: Before submitting, please ensure you have done the following
       options:
-        - label: Check existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues).
+        - label: I have checked existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues) for similar requests.
           required: true

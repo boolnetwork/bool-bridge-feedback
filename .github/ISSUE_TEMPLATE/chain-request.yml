@@ -1,58 +1,74 @@
-name: "🌟 Chain request"
-description: Request new chain to be supported in our bridge
+name: "🌟 Chain Support Request"
+description: Request a new chain to be supported in our bridge
 labels: ["pending triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill out this feature request!
+        Thank you for taking the time to fill out this chain support request!
   - type: input
     id: chain-name
     attributes:
-      label: Chain name
-      description: Chain name.
-      placeholder: Chain name
+      label: Chain Name
+      placeholder: e.g., Ethereum, Binance Smart Chain
     validations:
       required: true
   - type: input
-    id: token-link
+    id: chainid
     attributes:
-      label: Chain link, provide the chain website link.
-      description: 
-      placeholder: Chain link
+      label: Chain ID
+      description: Provide the Chain ID if it's an EVM chain.
+      placeholder: e.g., 1 for Ethereum, 56 for BSC
+  - type: input
+    id: chain-rpcs
+    attributes:
+      label: Chain RPCs
+      description: If available, provide RPC endpoints for the chain.
+      placeholder: e.g., https://mainnet.infura.io/v3/YOUR-PROJECT-ID
+    validations:
+      required: true
+  - type: input
+    id: chain-explorer
+    attributes:
+      label: Chain Explorer
+      placeholder: e.g., https://etherscan.io
     validations:
       required: true
   - type: textarea
     id: reason
     attributes:
-      label: Reason
-      description: Tell us the reason.
-      placeholder:
+      label: Reason for Request
+      description: Please explain why this chain should be supported.
+      placeholder: Enter your reasoning here
   - type: checkboxes
     id: chain-type
     attributes:
-      label: Chain type
-      description: Chain type.
+      label: Chain Type
+      description: Select the type of chain.
       options:
-        - label: BTC Layer2
-        - label: ETH Layer2
-        - label: EVM
-        - label: Non EVM chain
-        - label: Others
+        - BTC Layer2
+        - ETH Layer2
+        - EVM 
+        - Non-EVM chain
+        - Other
+    validations:
+      required: true
   - type: checkboxes
     id: service
     attributes:
-      label: Service to be supported
-      description: Which service .
+      label: Services to Support
+      description: Which services should support this chain?
       options:
         - label: Bool Bridge
         - label: B² Bridge
         - label: CKB Bridge
+    validations:
+      required: true
   - type: checkboxes
     id: required-info
     attributes:
-      label: Final checks
-      description: Before submitting, please make sure you do the following
+      label: Final Checks
+      description: Before submitting, please ensure you have done the following
       options:
-        - label: Check existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues).
+        - label: I have checked existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues) for similar requests.
           required: true

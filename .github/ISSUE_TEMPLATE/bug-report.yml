@@ -5,23 +5,31 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for helping us make Bool Bridge better! 
+        Thank you for taking the time to fill out this bug report!
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
   - type: checkboxes
     id: service
     attributes:
-      label: Choose a service 
-      description: Choose the service you face problem.
+      label: Affected service
+      description:  Which service are you experiencing the problem with?
       options:
         - label: Bool Bridge
         - label: B² Bridge
         - label: CKB Bridge
     validations:
       required: true
-  - type: textarea
-    id: bug-description
+  - type: checkboxes
+    id: required-info
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
-      placeholder: Bug description
-    validations:
-      required: true
+      label: Final checks
+      description: Before submitting, please make sure you do the following
+      options:
+        - label: Check existing [issues](https://github.com/boolnetwork/bool-bridge-feedback/issues).
+          required: true

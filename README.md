@@ -1,6 +1,6 @@
 # Welcome to Bool Bridge
 
-Thank you for using Bool Bridge! We value your input and are committed to continuously improving our app. This reposity is create for users to report issues, or requst new features.
+Thank you for using Bool Bridge! We value your input and are committed to continuously improving our services. This repository is created for users to report issues or requst new features.
 
 ## Running services
 
