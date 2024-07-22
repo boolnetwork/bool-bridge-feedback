@@ -24,7 +24,7 @@ body:
     attributes:
       label: Chain RPCs
       description: If available, provide RPC endpoints for the chain.
-      placeholder: Chain RPCs.
+      placeholder: Chain RPCs
     validations:
       required: true
   - type: input
@@ -32,7 +32,7 @@ body:
     attributes:
       label: Chain Explorer
       description: If available, provide explorer for the chain.
-      placeholder: Chain explorer.
+      placeholder: Chain explorer
     validations:
       required: true
   - type: checkboxes
