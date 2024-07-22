@@ -41,11 +41,11 @@ body:
       label: Chain Type
       description: Select the type of chain.
       options:
-        - BTC Layer2
-        - ETH Layer2
-        - EVM 
-        - Non-EVM chain
-        - Other
+        - label: BTC Layer2
+        - label: ETH Layer2
+        - label: EVM 
+        - label: Non-EVM chain
+        - label: Other
     validations:
       required: true
   - type: textarea
