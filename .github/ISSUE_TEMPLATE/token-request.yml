@@ -11,30 +11,14 @@ body:
     attributes:
       label: Token Name
       description: Full name of the token
-      placeholder: e.g., Ethereum, Bitcoin
-    validations:
-      required: true
-  - type: input
-    id: token-symbol
-    attributes:
-      label: Token Symbol
-      description: Trading symbol of the token
-      placeholder: e.g., ETH, BTC
-    validations:
-      required: true
-  - type: input
-    id: token-decimal
-    attributes:
-      label: Token Decimals
-      description: Number of decimal places for the token
-      placeholder: e.g., 18 for ETH, 8 for BTC
+      placeholder: e.g., ordi, DOGS
     validations:
       required: true
   - type: input
     id: token-link
     attributes:
       label: Token Link
-      description: For ERC20 tokens, provide the token's explorer URL. For BRC20 or Runes, provide a Unisat link.
+      description: Provide the token's explorer URL. For BRC20 or Runes, provide a Unisat link.
       placeholder: e.g., https://etherscan.io/address/0x...
     validations:
       required: true
