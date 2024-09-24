@@ -8,6 +8,8 @@ We currently offer the following services:
 
 - [Bool Bridge](https://boolbridge.com)
 
+- [Fractal Bridge](https://fractal.boolbridge.com)
+
 - [B² Bridge](https://bsquared.boolbridge.com)
 
 - [CKB Bridge](https://ckb.boolbridge.com)
