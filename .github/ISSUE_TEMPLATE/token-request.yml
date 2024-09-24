@@ -19,7 +19,7 @@ body:
     attributes:
       label: Token Link
       description: Provide the token's explorer URL. For BRC20 or Runes, provide a Unisat link.
-      placeholder: e.g., https://etherscan.io/address/0x...
+      placeholder: e.g. https://unisat.io/brc20/ordi
     validations:
       required: true
   - type: dropdown
