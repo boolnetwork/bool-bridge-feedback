@@ -11,7 +11,7 @@ body:
     attributes:
       label: Token Name
       description: Full name of the token
-      placeholder: e.g., ordi, DOGS
+      placeholder: QUAQ
     validations:
       required: true
   - type: input
@@ -19,7 +19,7 @@ body:
     attributes:
       label: Token Link
       description: Provide the token's explorer URL. For BRC20 or Runes, provide a Unisat link.
-      placeholder: e.g. https://unisat.io/brc20/ordi
+      placeholder: https://unisat.io/brc20/QUAQ
     validations:
       required: true
   - type: dropdown
@@ -29,10 +29,6 @@ body:
       description: Select the type of token
       options:
         - BRC-20
-        - RUNES
-        - ERC-20
-        - xUDT
-        - Other
     validations:
       required: true
   - type: checkboxes
@@ -41,10 +37,7 @@ body:
       label: Requested Services
       description: Which services should support this token?
       options:
-        - label: Bool Bridge
         - label: Fractal Bridge
-        - label: B² Bridge
-        - label: CKB Bridge
   - type: textarea
     id: description
     attributes:
