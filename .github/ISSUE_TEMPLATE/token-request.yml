@@ -30,6 +30,14 @@ body:
       placeholder: e.g., https://ordiscan.com/brc20/ORDI.png
     validations:
       required: false
+  - type: input
+    id: token-x
+    attributes:
+      label: Token Project X Account
+      description: X(formerly Twitter) account of the token project.
+      placeholder: e.g., https://x.com/xxx
+    validations:
+      required: false
   - type: dropdown
     id: token-type
     attributes:
