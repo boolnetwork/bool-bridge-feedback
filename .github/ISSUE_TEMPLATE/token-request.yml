@@ -27,17 +27,17 @@ body:
     attributes:
       label: Token Icon
       description: Icon link of the token
-      placeholder: e.g., https://ordiscan.com/brc20/ORDI.png
+      placeholder: e.g. https://ordiscan.com/brc20/ORDI.png
     validations:
-      required: false
+      required: true
   - type: input
     id: token-x
     attributes:
       label: Token Project X Account
       description: X(formerly Twitter) account of the token project.
-      placeholder: e.g., https://x.com/xxx
+      placeholder: e.g. https://x.com/xxx
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: token-type
     attributes:
